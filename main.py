@@ -13,7 +13,7 @@ import os
 my_email = os.environ.get("MY_EMAIL")
 email_password = os.environ.get("EMAIL_PASSWORD")
 smtp_host = os.environ.get("SMTP_HOST")
-smtp_port = int(os.environ.get("SMTP_PORT"))
+smtp_port = os.environ.get("SMTP_PORT", 578)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'gfdghdfgdffdfffd'
