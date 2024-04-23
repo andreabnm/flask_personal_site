@@ -1,0 +1,38 @@
+{% include "header.html" %}
+    <!-- Contacs Section -->
+    <section  id="Contacts">
+    <div class="container-fluid padding mycontainer">
+        <div class="col-12">
+            <h2 class="sectiontitle">Contacts</h2>
+            <p>You can contact me for business collaborations through my social media accounts or you can send me a message using the form below.</p>
+        </div>
+        <div class="row text-center padding">
+            <div class="col-12 social padding">
+                <a href="https://www.linkedin.com/in/andrea-b-28b722150/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/Andrea50071827" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/andreabnm13/ " target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/andreabnm" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="row text-center padding">
+            <div class="col-12">
+                {% from "bootstrap5/form.html" import render_form %}
+                {% if not sent %}
+                {{ ckeditor.load() }}
+                {{ ckeditor.config(name='message') }}
+                {{render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                {% else %}
+
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <p class="flash">{{ message }}</p>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                {% endif %}
+            </div>
+    </div>
+    </section>
+{% include "footer.html" %}

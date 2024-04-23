@@ -1,0 +1,243 @@
+html {
+  scroll-behavior: smooth;
+  --main-bg-color: #FAF3F3;
+  --second-bg-color: #A7BBC7;
+  --namecard-bgcolor: #E1E5EA;
+  --text-color-primary: #262626;
+  --text-color-secondary: #FAF3F3;
+  --link-color: #dc798c;
+  --link-hover-color: #C61600;
+  --link-press-color: #C61600;
+  --photo-border: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color-primary);
+}
+
+body.dark {
+  --main-bg-color: #334756;
+  --second-bg-color: #082032;
+  --namecard-bgcolor: #2C394B;
+  --text-color-primary: white;
+  --text-color-secondary: #EDEDED;
+  --link-color: #da1043;
+  --photo-border: rgba(255, 255, 255, 0.5);
+}
+
+.navbar {
+  background-color: var(--second-bg-color);
+  color: white;
+  padding: 1rem;
+}
+.navbar .navbar-toggler-icon {
+  color: var(--text-color-secondary);
+}
+.navbar #change_theme {
+  align-self: center;
+  justify-self: end;
+}
+
+footer {
+  background-color: var(--second-bg-color);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.nav-item {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.nav-link, #change_theme {
+  color: var(--text-color-secondary);
+}
+
+.nav-link:hover, #change_theme:hover, .fa-bars:hover {
+  color: var(--text-color-primary);
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.btn_custom {
+  border-color: var(--link-color);
+  background-color: var(--link-color);
+}
+
+.btn_custom:hover {
+  border-color: var(--link-hover-color);
+  background-color: var(--link-hover-color);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  border-color: var(--link-press-color);
+  background-color: var(--link-press-color);
+}
+
+.mycontainer {
+  padding-top: 2rem;
+  max-width: 60%;
+  padding-bottom: 2rem;
+}
+
+.my-4 {
+  background-color: var(--text-color-primary);
+  max-width: 60%;
+}
+
+.namecontainer {
+  max-width: 100%;
+  background-color: var(--namecard-bgcolor);
+}
+
+.vertical-center {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.namecard {
+  max-width: 60%;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.name, .description {
+  white-space: nowrap;
+}
+
+.description {
+  font-size: 1.2rem;
+}
+
+.myphoto {
+  white-space: nowrap;
+  border-radius: 50%;
+  border: 3px solid var(--photo-border);
+}
+
+.sectiontitle, .social, .contactform {
+  padding-bottom: 2.5rem;
+}
+
+.skill_title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.skill_title .svg-inline--fa {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.skills_arrow {
+  transition: 0.4s;
+}
+
+.skill_close .skill_list {
+  height: 0;
+  overflow: hidden;
+}
+
+.skill_open .skill_list {
+  height: max-content;
+}
+
+.skill_list {
+  margin-bottom: 2.5rem;
+}
+
+.skill_point {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill_point_title, .skill_perc {
+  vertical-align: middle;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.skill_bar {
+  height: 5px;
+  border-radius: 0.25rem;
+  background-color: var(--link-hover-color);
+}
+
+.skill_level {
+  height: 5px;
+  display: block;
+  background-color: var(--text-color-primary);
+}
+
+.social a {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.fa-linkedin {
+  color: #0a66c2;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-instagram {
+  color: #517fa4;
+}
+
+.fa-github {
+  color: var(--text-color-primary);
+}
+
+.fa-linkedin:hover,
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-github:hover {
+  color: var(--text-color-secondary);
+}
+
+.col-form-label, .form-control {
+  white-space: nowrap;
+}
+
+.col-form-label {
+  padding-left: 0;
+}
+
+#download_cv, #send_message {
+  display: block;
+  margin: 0 auto;
+}
+
+.flash {
+  color: #ee6f57;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .social a {
+    font-size: 3rem;
+    padding: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .name {
+    text-align: right;
+  }
+  .col-form-label {
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
