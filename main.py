@@ -5,7 +5,6 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Email
 from flask_ckeditor import CKEditor, CKEditorField
 from flask_bootstrap import Bootstrap5
-import email_validator
 import email.message
 import smtplib
 import os
